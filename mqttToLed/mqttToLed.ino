@@ -68,10 +68,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
   Serial.print(topic);
   Serial.print("] ");
   for (int i = 0; i < length; i++) {
-    //test
-
-    Serial.print((char)payload[i]);
-    
+    Serial.print((char)payload[i]);   
   }
   Serial.println();
 
@@ -86,6 +83,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
 
 }
 
+// my callback to show mqtt message on LED(to be perfect)
 void callback1(char* topic, byte* payload, unsigned int length) {
   //put message in this char[]
   char a[100];
